@@ -1,22 +1,26 @@
+// Gallery / Lightbox
 const lightbox = document.getElementById('lightbox');
 const lbImg = document.getElementById('lb-img');
-let galleryImages = [];
+const lbCaption = document.getElementById('lb-caption');
+let galleryItems = [];
 let currentIndex = 0;
 
 document.querySelectorAll('[data-gallery]').forEach(el => {
   el.style.cursor = 'pointer';
   el.addEventListener('click', () => {
     const group = el.dataset.gallery;
-    galleryImages = Array.from(document.querySelectorAll(`[data-gallery="${group}"] img`));
-    const clickedImg = el.querySelector('img');
-    currentIndex = galleryImages.indexOf(clickedImg);
+    galleryItems = Array.from(document.querySelectorAll(`[data-gallery="${group}"]`));
+    currentIndex = galleryItems.indexOf(el);
     openLightbox();
   });
 });
 
 function openLightbox() {
-  lbImg.src = galleryImages[currentIndex].src;
-  lbImg.alt = galleryImages[currentIndex].alt;
+  const item = galleryItems[currentIndex];
+  const img = item.querySelector('img');
+  lbImg.src = img.src;
+  lbImg.alt = img.alt;
+  lbCaption.textContent = item.dataset.caption || img.alt || '';
   lightbox.classList.add('active');
   document.body.style.overflow = 'hidden';
 }
@@ -27,15 +31,21 @@ function closeLightbox() {
 }
 
 function showPrev() {
-  currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
-  lbImg.src = galleryImages[currentIndex].src;
-  lbImg.alt = galleryImages[currentIndex].alt;
+  currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
+  updateLightbox();
 }
 
 function showNext() {
-  currentIndex = (currentIndex + 1) % galleryImages.length;
-  lbImg.src = galleryImages[currentIndex].src;
-  lbImg.alt = galleryImages[currentIndex].alt;
+  currentIndex = (currentIndex + 1) % galleryItems.length;
+  updateLightbox();
+}
+
+function updateLightbox() {
+  const item = galleryItems[currentIndex];
+  const img = item.querySelector('img');
+  lbImg.src = img.src;
+  lbImg.alt = img.alt;
+  lbCaption.textContent = item.dataset.caption || img.alt || '';
 }
 
 document.querySelector('.lb-close').addEventListener('click', closeLightbox);
@@ -43,9 +53,7 @@ document.querySelector('.lb-prev').addEventListener('click', showPrev);
 document.querySelector('.lb-next').addEventListener('click', showNext);
 
 lightbox.addEventListener('click', (e) => {
-  if (e.target === lightbox || e.target.classList.contains('lb-content')) {
-    closeLightbox();
-  }
+  if (e.target === lightbox) closeLightbox();
 });
 
 document.addEventListener('keydown', (e) => {
@@ -53,4 +61,22 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') closeLightbox();
   if (e.key === 'ArrowLeft') showPrev();
   if (e.key === 'ArrowRight') showNext();
+});
+
+// Mobile menu
+const toggle = document.querySelector('.menu-toggle');
+const nav = document.getElementById('nav');
+
+toggle.addEventListener('click', () => {
+  const open = nav.classList.toggle('open');
+  toggle.classList.toggle('open');
+  toggle.setAttribute('aria-expanded', open);
+});
+
+nav.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    nav.classList.remove('open');
+    toggle.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+  });
 });

@@ -19,7 +19,10 @@
     <header class="site-header">
       <div class="container header-inner">
         <a class="brand" href="#">⚡ E-PI</a>
-        <nav class="nav">
+        <button class="menu-toggle" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="nav" id="nav">
           <a href="#sobre">Sobre</a>
           <a href="#aplicacao">Aplicação</a>
           <a href="#macde">MACDE</a>
@@ -134,34 +137,36 @@
           </div>
 
           <div class="screenshots-carousel">
-            <div class="screenshot-item" data-gallery="app">
+            <div class="screenshot-item" data-gallery="app" data-caption="Página Inicial — Apresentação, download do TCC e guia de uso">
               <img src="assets/tela-inicial.png" alt="Página Inicial do E-PI" loading="lazy" />
               <p class="screenshot-caption">Página Inicial</p>
             </div>
-            <div class="screenshot-item" data-gallery="app">
+            <div class="screenshot-item" data-gallery="app" data-caption="Informações da UC — Agente de conexão e subgrupo tarifário">
               <img src="assets/tela-uc.png" alt="Informações da UC" loading="lazy" />
               <p class="screenshot-caption">Informações da UC</p>
             </div>
-            <div class="screenshot-item" data-gallery="app">
+            <div class="screenshot-item" data-gallery="app" data-caption="Histórico de Consumo — Inserção manual ou upload CSV">
               <img src="assets/tela-historico.png" alt="Histórico de Consumo" loading="lazy" />
               <p class="screenshot-caption">Histórico de Consumo</p>
             </div>
-            <div class="screenshot-item" data-gallery="app">
+            <div class="screenshot-item" data-gallery="app" data-caption="Configurações Avançadas — Impostos, custos do ACL e projeções">
               <img src="assets/tela-config.png" alt="Configurações Avançadas" loading="lazy" />
               <p class="screenshot-caption">Configurações Avançadas</p>
             </div>
-            <div class="screenshot-item" data-gallery="app">
+            <div class="screenshot-item" data-gallery="app" data-caption="Resultado E-PI — Execução da simulação">
               <img src="assets/tela-resultado.png" alt="Resultado E-PI" loading="lazy" />
               <p class="screenshot-caption">Resultado E-PI</p>
             </div>
           </div>
 
           <div class="result-showcase">
-            <div class="result-img" data-gallery="app">
+            <div class="result-img" data-gallery="app" data-caption="E-PI Mensal e Total (R$/MWh) — Resultado da simulação">
               <img src="assets/resultado-grafico.png" alt="Gráfico E-PI Mensal e Total" loading="lazy" />
+              <p class="screenshot-caption">E-PI Mensal e Total (R$/MWh) — Resultado da simulação</p>
             </div>
-            <div class="result-img" data-gallery="app">
+            <div class="result-img" data-gallery="app" data-caption="Consumo Ponta e Fora Ponta — Histórico e Projeção (MWh)">
               <img src="assets/resultado-consumo.png" alt="Consumo Ponta e Fora Ponta — Histórico e Projeção" loading="lazy" />
+              <p class="screenshot-caption">Consumo Ponta e Fora Ponta — Histórico e Projeção (MWh)</p>
             </div>
           </div>
 
@@ -259,7 +264,7 @@
               <h3>Desenvolvimento da Funcionalidade Estimativa do Preço de Indiferença para a Plataforma Macde</h3>
               <p class="pub-authors">LEMOS, J. C.; TAKIGAWA, F. Y. K.; TENFEN, D.; CAMPOS, D.; VEIGA, C. E.; FERNANDES, R. C.</p>
               <p class="pub-venue">Seminário de Ensino, Pesquisa, Extensão e Inovação do IFSC — DT 4: Inovação Tecnológica. Apoio Setec/MEC.</p>
-              <span class="pub-type">Trabalho de pesquisa</span>
+              <span class="pub-type">Resumo expandido</span>
             </article>
 
             <article class="pub-card">
@@ -314,6 +319,7 @@
       <button class="lb-next" aria-label="Próximo">›</button>
       <div class="lb-content">
         <img id="lb-img" src="" alt="" />
+        <p class="lb-caption" id="lb-caption"></p>
       </div>
     </div>
 
