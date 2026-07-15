@@ -134,34 +134,34 @@
           </div>
 
           <div class="screenshots-carousel">
-            <div class="screenshot-item">
-              <img src="assets/tela-inicial.png" alt="Página Inicial do E-PI com descrição da ferramenta, link para TCC e abas informativas" loading="lazy" />
-              <p class="screenshot-caption">Página Inicial — Apresentação, download do TCC e guia de uso</p>
+            <div class="screenshot-item" data-gallery="app">
+              <img src="assets/tela-inicial.png" alt="Página Inicial do E-PI" loading="lazy" />
+              <p class="screenshot-caption">Página Inicial</p>
             </div>
-            <div class="screenshot-item">
-              <img src="assets/tela-uc.png" alt="Formulário de Informações da UC com seleção de distribuidora e subgrupo" loading="lazy" />
-              <p class="screenshot-caption">Informações da UC — Agente de conexão e subgrupo tarifário</p>
+            <div class="screenshot-item" data-gallery="app">
+              <img src="assets/tela-uc.png" alt="Informações da UC" loading="lazy" />
+              <p class="screenshot-caption">Informações da UC</p>
             </div>
-            <div class="screenshot-item">
-              <img src="assets/tela-historico.png" alt="Tela de inserção de histórico de consumo com opções de tabela ou CSV" loading="lazy" />
-              <p class="screenshot-caption">Histórico de Consumo — Inserção manual ou upload CSV</p>
+            <div class="screenshot-item" data-gallery="app">
+              <img src="assets/tela-historico.png" alt="Histórico de Consumo" loading="lazy" />
+              <p class="screenshot-caption">Histórico de Consumo</p>
             </div>
-            <div class="screenshot-item">
-              <img src="assets/tela-config.png" alt="Configurações avançadas com impostos, custos do ACL e projeções" loading="lazy" />
-              <p class="screenshot-caption">Configurações Avançadas — Impostos, custos do ACL e projeções</p>
+            <div class="screenshot-item" data-gallery="app">
+              <img src="assets/tela-config.png" alt="Configurações Avançadas" loading="lazy" />
+              <p class="screenshot-caption">Configurações Avançadas</p>
             </div>
-            <div class="screenshot-item">
-              <img src="assets/tela-resultado.png" alt="Resultado E-PI com botão para rodar simulação" loading="lazy" />
-              <p class="screenshot-caption">Resultado E-PI — Execução da simulação</p>
+            <div class="screenshot-item" data-gallery="app">
+              <img src="assets/tela-resultado.png" alt="Resultado E-PI" loading="lazy" />
+              <p class="screenshot-caption">Resultado E-PI</p>
             </div>
           </div>
 
           <div class="result-showcase">
-            <div class="result-img">
-              <img src="assets/resultado-grafico.png" alt="Gráfico E-PI Mensal e Total mostrando variação do preço de indiferença ao longo do tempo" loading="lazy" />
+            <div class="result-img" data-gallery="app">
+              <img src="assets/resultado-grafico.png" alt="Gráfico E-PI Mensal e Total" loading="lazy" />
             </div>
-            <div class="result-img">
-              <img src="assets/resultado-consumo.png" alt="Gráfico de consumo ponta e fora ponta com histórico e projeção" loading="lazy" />
+            <div class="result-img" data-gallery="app">
+              <img src="assets/resultado-consumo.png" alt="Consumo Ponta e Fora Ponta — Histórico e Projeção" loading="lazy" />
             </div>
           </div>
 
@@ -198,7 +198,7 @@
             <h2>Arquitetura Modular</h2>
             <p>Desenvolvido com orientação a objetos, padrão Facade e validação com Pydantic.</p>
           </div>
-          <div class="arch-showcase">
+          <div class="arch-showcase" data-gallery="arch">
             <img src="assets/arquitetura-modulos.png" alt="Diagrama de comunicação entre os módulos do E-PI" loading="lazy" />
           </div>
           <div class="tech-stack">
@@ -225,7 +225,7 @@
           </div>
           <div class="grid-2col grid-2col-reverse">
             <div class="macde-screenshot">
-              <img src="assets/macde-epi.png" alt="Interface do E-PI na plataforma MACDE com gráfico de estimativa" loading="lazy" />
+              <img src="assets/macde-epi.png" alt="Interface do E-PI na plataforma MACDE" loading="lazy" />
             </div>
             <div class="content-block">
               <p>O <strong>MACDE</strong> é uma plataforma desenvolvida pelo Grupo de Estudos em Sistemas de Energia (GESE) do IFSC desde 2017, com apoio da <strong>Setec/MEC</strong> através do programa EnergIF.</p>
@@ -250,16 +250,8 @@
               <div class="pub-badge">SEPOPE 2026</div>
               <h3>Ferramenta Computacional Web para Análise de Viabilidade Econômica na Migração para o Mercado Livre: Uma Abordagem via Preço de Indiferença</h3>
               <p class="pub-authors">LEMOS, J. C.; TAKIGAWA, F. Y. K.</p>
-              <p class="pub-venue">XVI Symposium of Specialists in Electric Operational and Expansion Planning — Foz do Iguaçu, PR. Organizado pela ITAIPU, patrocinado pelo CIGRE-Brasil.</p>
+              <p class="pub-venue">XVI SEPOPE (Simpósio de Especialistas em Planejamento da Operação e Expansão Elétrica) — Foz do Iguaçu, PR. Organizado pelo CIGRE-Brasil, patrocinado pela ITAIPU.</p>
               <span class="pub-type">Artigo apresentado</span>
-            </article>
-
-            <article class="pub-card">
-              <div class="pub-badge">TCC 2025</div>
-              <h3>Aplicação Web para Estimativa do Preço de Indiferença como Ferramenta de Apoio à Análise de Migração para o ACL</h3>
-              <p class="pub-authors">LEMOS, J. C.</p>
-              <p class="pub-venue">Trabalho de Conclusão de Curso — CST em Sistemas de Energia, IFSC Câmpus Florianópolis. Orientador: Prof. Dr. Fabrício Y. K. Takigawa.</p>
-              <span class="pub-type">Monografia (75 p.)</span>
             </article>
 
             <article class="pub-card">
@@ -271,10 +263,18 @@
             </article>
 
             <article class="pub-card">
+              <div class="pub-badge">TCC 2025</div>
+              <h3>Aplicação Web para Estimativa do Preço de Indiferença como Ferramenta de Apoio à Análise de Migração para o ACL</h3>
+              <p class="pub-authors">LEMOS, J. C.</p>
+              <p class="pub-venue">Trabalho de Conclusão de Curso — CST em Sistemas de Energia, IFSC Câmpus Florianópolis. Orientador: Prof. Dr. Fabrício Y. K. Takigawa.</p>
+              <span class="pub-type">Monografia (75 p.)</span>
+            </article>
+
+            <article class="pub-card">
               <div class="pub-badge">JIICEU 2025</div>
               <h3>Proposta de Inserção da Estimativa do Preço de Indiferença na Plataforma MACDE</h3>
               <p class="pub-authors">LEMOS, J. C.; TAKIGAWA, F. Y. K.</p>
-              <p class="pub-venue">Jornada de Iniciação à Investigação Científica e à Extensão Universitária — IFSC Câmpus Florianópolis.</p>
+              <p class="pub-venue">Jornada Internacional de Iniciação Científica e Extensão Universitária — Conjugare – Centro Português de Apoio à Pesquisa Científica e à Cultura.</p>
               <span class="pub-type">Resumo expandido</span>
             </article>
           </div>
@@ -285,11 +285,16 @@
       <section class="section section-alt" id="autor">
         <div class="container">
           <div class="author-card">
-            <h3>Joneimar Cruz de Lemos</h3>
-            <p>Tecnólogo em Sistemas de Energia e aluno do curso Técnico em Meteorologia, ambos no IFSC Câmpus Florianópolis. Bolsista desde 2022 em projetos de pesquisa nas áreas de operação de UHEs, regulação e comercialização de energia. Atualmente integra o E-PI à plataforma MACDE e participa da migração da plataforma para o GOV.br.</p>
-            <div class="author-links">
-              <a href="https://linkedin.com/in/joneimar" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-              <a href="https://energycode.com.br" target="_blank" rel="noopener noreferrer">Portfólio</a>
+            <div class="author-photo">
+              <img src="assets/foto-autor.png" alt="Joneimar Cruz de Lemos apresentando no SEPOPE 2026" loading="lazy" />
+            </div>
+            <div class="author-info">
+              <h3>Joneimar Cruz de Lemos</h3>
+              <p>Tecnólogo em Sistemas de Energia e aluno do curso Técnico em Meteorologia, ambos no IFSC Câmpus Florianópolis. Bolsista desde 2022 em projetos de pesquisa nas áreas de operação de UHEs, regulação e comercialização de energia. Atualmente integra o E-PI à plataforma MACDE e participa da migração da plataforma para o GOV.br.</p>
+              <div class="author-links">
+                <a href="https://linkedin.com/in/joneimar" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://energycode.com.br" target="_blank" rel="noopener noreferrer">Portfólio</a>
+              </div>
             </div>
           </div>
         </div>
@@ -301,5 +306,17 @@
         <p>⚡ E-PI · Estimativa do Preço de Indiferença · Desenvolvido por <a href="https://energycode.com.br" target="_blank" rel="noopener noreferrer">Joneimar Lemos</a></p>
       </div>
     </footer>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox">
+      <button class="lb-close" aria-label="Fechar">✕</button>
+      <button class="lb-prev" aria-label="Anterior">‹</button>
+      <button class="lb-next" aria-label="Próximo">›</button>
+      <div class="lb-content">
+        <img id="lb-img" src="" alt="" />
+      </div>
+    </div>
+
+    <script src="gallery.js"></script>
   </body>
 </html>
