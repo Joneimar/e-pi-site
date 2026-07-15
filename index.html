@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0f172a" />
+    <title>E-PI — Estimativa do Preço de Indiferença</title>
+    <meta name="description" content="E-PI: ferramenta computacional web para análise de viabilidade econômica na migração para o Mercado Livre de Energia. Software registrado no INPI." />
+    <meta name="author" content="Joneimar Lemos" />
+    <meta property="og:title" content="E-PI — Estimativa do Preço de Indiferência" />
+    <meta property="og:description" content="Ferramenta computacional web para análise de viabilidade econômica na migração para o Mercado Livre de Energia." />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#">E-PI</a>
+        <nav class="nav">
+          <a href="#sobre">Sobre</a>
+          <a href="#aplicacao">Aplicação</a>
+          <a href="#macde">MACDE</a>
+          <a href="#publicacoes">Publicações</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="badge-inpi">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Software registrado no INPI
+          </div>
+          <h1>Estimativa do Preço<br>de Indiferença</h1>
+          <p class="hero-subtitle">Ferramenta computacional web de acesso público para análise de viabilidade econômica na migração para o Ambiente de Contratação Livre (ACL) de energia elétrica.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://gese.florianopolis.ifsc.edu.br/e-pi/" target="_blank" rel="noopener noreferrer">Acessar Ferramenta</a>
+            <a class="btn btn-ghost" href="#publicacoes">Ver publicações</a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat">
+              <span class="stat-value">4</span>
+              <span class="stat-label">Publicações</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value">2019</span>
+              <span class="stat-label">Registro INPI</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value">85k+</span>
+              <span class="stat-label">UCs no ACL (2025)</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-glow"></div>
+      </section>
+
+      <!-- SOBRE -->
+      <section class="section" id="sobre">
+        <div class="container">
+          <div class="section-head">
+            <span class="section-tag">Contexto</span>
+            <h2>O que é o E-PI?</h2>
+          </div>
+          <div class="grid-2col">
+            <div class="content-block">
+              <p>Com a <strong>Portaria Normativa nº 50/2022</strong> do MME, todos os consumidores do Grupo A (média e alta tensão) passaram a poder migrar para o Ambiente de Contratação Livre (ACL). Isso representa potencial economia, mas exige análise técnica complexa.</p>
+              <p>O <strong>E-PI</strong> calcula o preço máximo da energia no ACL que equaliza os custos totais com o ACR — o <em>Preço de Indiferença</em>. Qualquer preço de mercado inferior a este valor indica vantagem econômica na migração.</p>
+              <p>Diferentemente das ferramentas comerciais do mercado, o E-PI é <strong>gratuito, transparente e sem viés comercial</strong>, desenvolvido em ambiente acadêmico para auxiliar na tomada de decisão dos consumidores.</p>
+            </div>
+            <div class="highlight-card">
+              <h3>Registro INPI</h3>
+              <div class="inpi-info">
+                <div class="inpi-row">
+                  <span class="inpi-label">Processo</span>
+                  <span class="inpi-value">BR512019002668-3</span>
+                </div>
+                <div class="inpi-row">
+                  <span class="inpi-label">Tipo</span>
+                  <span class="inpi-value">Programa de Computador</span>
+                </div>
+                <div class="inpi-row">
+                  <span class="inpi-label">Título</span>
+                  <span class="inpi-value">Preço de Indiferença</span>
+                </div>
+                <div class="inpi-row">
+                  <span class="inpi-label">Autores</span>
+                  <span class="inpi-value">Takigawa, F. Y. K.; Lima, M. N. S. M.</span>
+                </div>
+                <div class="inpi-row">
+                  <span class="inpi-label">Ano</span>
+                  <span class="inpi-value">2019</span>
+                </div>
+              </div>
+              <p class="inpi-note">O E-PI é uma evolução do software original registrado, com novos módulos de projeção, validação e interface web moderna.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- APLICAÇÃO -->
+      <section class="section section-dark" id="aplicacao">
+        <div class="container">
+          <div class="section-head">
+            <span class="section-tag">Aplicação Web</span>
+            <h2>Simulador Streamlit</h2>
+            <p>Interface interativa desenvolvida em Python com a biblioteca Streamlit, permitindo que consumidores de qualquer localidade do Brasil simulem a viabilidade de migração.</p>
+          </div>
+          <div class="app-showcase">
+            <img src="assets/interface-epi.png" alt="Capturas de tela do E-PI — Página inicial, formulário de simulação e resultado com gráfico E-PI Mensal e Total" loading="lazy" />
+          </div>
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg>
+              </div>
+              <h3>Simulação Interativa</h3>
+              <p>Insira dados da UC, histórico de consumo, tributos e parâmetros do ACL. Visualize o E-PI mensal e total em gráficos interativos.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 0 1-9 9m9-9a9 9 0 0 0-9-9m9 9H3m9 9a9 9 0 0 1-9-9m9 9c1.66 0 3-4.03 3-9s-1.34-9-3-9m0 18c-1.66 0-3-4.03-3-9s1.34-9 3-9m-9 9a9 9 0 0 1 9-9"/></svg>
+              </div>
+              <h3>Dados da ANEEL</h3>
+              <p>Coleta automatizada de tarifas via API da ANEEL. Banco SQLite com atualização diária por distribuidora.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+              </div>
+              <h3>Projeções Futuras</h3>
+              <p>Naive Sazonal para consumo, projeção tarifária, mudança de patamar de carga e horizonte contratual configurável.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+              </div>
+              <h3>Exportação</h3>
+              <p>Resultados exportáveis em CSV e JSON para análises complementares ou apresentação a gestores.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ARQUITETURA -->
+      <section class="section" id="arquitetura">
+        <div class="container">
+          <div class="section-head">
+            <span class="section-tag">Engenharia de Software</span>
+            <h2>Arquitetura Modular</h2>
+            <p>Desenvolvido com orientação a objetos, padrão Facade e validação com Pydantic.</p>
+          </div>
+          <div class="arch-showcase">
+            <img src="assets/arquitetura-modulos.png" alt="Diagrama de comunicação entre os módulos do E-PI — Interface Streamlit, Facade, Preparador de Dados, Módulo de Previsão, Validador, Cálculo do E-PI, Config de Simulação, Atualização de Tarifas e Banco de Dados SQLite" loading="lazy" />
+          </div>
+          <div class="tech-stack">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Streamlit</span>
+            <span class="tech-tag">Pydantic</span>
+            <span class="tech-tag">SQLite</span>
+            <span class="tech-tag">API ANEEL</span>
+            <span class="tech-tag">Plotly</span>
+            <span class="tech-tag">OOP</span>
+            <span class="tech-tag">Facade Pattern</span>
+            <span class="tech-tag">Dataclass</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- MACDE -->
+      <section class="section section-dark" id="macde">
+        <div class="container">
+          <div class="section-head">
+            <span class="section-tag">Integração</span>
+            <h2>Inserção no MACDE</h2>
+            <p>O E-PI está sendo integrado à plataforma MACDE — Modelo de Avaliação dos Contratos de Demanda de Energia.</p>
+          </div>
+          <div class="grid-2col">
+            <div class="content-block">
+              <p>O <strong>MACDE</strong> é uma plataforma desenvolvida pelo Grupo de Estudos em Sistemas de Energia (GESE) do IFSC desde 2017, com apoio da <strong>Setec/MEC</strong> através do programa EnergIF.</p>
+              <p>A plataforma auxilia consumidores do Grupo A na otimização econômica de contratos de demanda e faz parte do <strong>Programa Conecta Rede</strong> (MEC/RNP), sendo acessível por toda a rede federal de educação profissional e tecnológica.</p>
+              <p>Na versão MACDE, o E-PI utiliza backend Python/Flask com API REST e frontend Vue.js, reaproveitando dados já coletados pela plataforma (tarifas, consumo, previsão) como parâmetros de entrada.</p>
+            </div>
+            <div class="macde-card">
+              <div class="macde-header">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg>
+                <h3>MACDE</h3>
+              </div>
+              <ul class="macde-features">
+                <li>Otimização de contratos de demanda</li>
+                <li>Previsão de consumo</li>
+                <li>Tarifas via API ANEEL</li>
+                <li>Relatórios para distribuidoras</li>
+                <li><strong>E-PI — Estimativa do Preço de Indiferença</strong></li>
+              </ul>
+              <a class="btn btn-outline" href="https://macde.rnp.br/" target="_blank" rel="noopener noreferrer">Acessar MACDE</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PUBLICAÇÕES -->
+      <section class="section" id="publicacoes">
+        <div class="container">
+          <div class="section-head">
+            <span class="section-tag">Acadêmico</span>
+            <h2>Publicações</h2>
+            <p>Trabalhos científicos publicados relacionados ao desenvolvimento e validação do E-PI.</p>
+          </div>
+          <div class="publications-grid">
+            <article class="pub-card pub-featured">
+              <div class="pub-badge">SEPOPE 2026</div>
+              <h3>Ferramenta Computacional Web para Análise de Viabilidade Econômica na Migração para o Mercado Livre: Uma Abordagem via Preço de Indiferença</h3>
+              <p class="pub-authors">LEMOS, J. C.; TAKIGAWA, F. Y. K.</p>
+              <p class="pub-venue">XVI Symposium of Specialists in Electric Operational and Expansion Planning — Foz do Iguaçu, PR. Organizado pela ITAIPU, patrocinado pelo CIGRE-Brasil.</p>
+              <span class="pub-type">Artigo apresentado</span>
+            </article>
+
+            <article class="pub-card">
+              <div class="pub-badge">TCC 2025</div>
+              <h3>Aplicação Web para Estimativa do Preço de Indiferença como Ferramenta de Apoio à Análise de Migração para o ACL</h3>
+              <p class="pub-authors">LEMOS, J. C.</p>
+              <p class="pub-venue">Trabalho de Conclusão de Curso — CST em Sistemas de Energia, IFSC Câmpus Florianópolis. Orientador: Prof. Dr. Fabrício Y. K. Takigawa.</p>
+              <span class="pub-type">Monografia (75 p.)</span>
+            </article>
+
+            <article class="pub-card">
+              <div class="pub-badge">SEPEI 2026</div>
+              <h3>Desenvolvimento da Funcionalidade Estimativa do Preço de Indiferença para a Plataforma Macde</h3>
+              <p class="pub-authors">LEMOS, J. C.; TAKIGAWA, F. Y. K.; TENFEN, D.; CAMPOS, D.; VEIGA, C. E.; FERNANDES, R. C.</p>
+              <p class="pub-venue">Seminário de Ensino, Pesquisa, Extensão e Inovação do IFSC — DT 4: Inovação Tecnológica, Processos Produtivos e Futuro das Tecnologias. Apoio Setec/MEC.</p>
+              <span class="pub-type">Trabalho de pesquisa</span>
+            </article>
+
+            <article class="pub-card">
+              <div class="pub-badge">JIICEU 2025</div>
+              <h3>Proposta de Inserção da Estimativa do Preço de Indiferença na Plataforma MACDE</h3>
+              <p class="pub-authors">LEMOS, J. C.; TAKIGAWA, F. Y. K.</p>
+              <p class="pub-venue">Jornada de Iniciação à Investigação Científica e à Extensão Universitária — IFSC Câmpus Florianópolis.</p>
+              <span class="pub-type">Resumo expandido</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- AUTOR -->
+      <section class="section section-dark" id="autor">
+        <div class="container">
+          <div class="author-card">
+            <div class="author-info">
+              <h3>Joneimar Cruz de Lemos</h3>
+              <p>Tecnólogo em Sistemas de Energia e aluno do curso Técnico em Meteorologia, ambos no IFSC Câmpus Florianópolis. Bolsista desde 2022 em projetos de pesquisa nas áreas de operação de UHEs, regulação e comercialização de energia. Atualmente integra o E-PI à plataforma MACDE e participa da migração da plataforma para o GOV.br.</p>
+              <div class="author-links">
+                <a href="https://linkedin.com/in/joneimar" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://energycode.com.br" target="_blank" rel="noopener noreferrer">Portfólio</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>⚡ E-PI · Estimativa do Preço de Indiferença · Desenvolvido por <a href="https://energycode.com.br" target="_blank" rel="noopener noreferrer">Joneimar Lemos</a></p>
+      </div>
+    </footer>
+  </body>
+</html>
